@@ -1,0 +1,34 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on pushes to the main branch
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+        with:
+          submodules: false
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build Hugo site
+        run: hugo --minify
+
+      - name: Deploy to Deployment Repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_dir: ./public
+          publish_repo: yourusername/bavlynady.github.io-deploy  # Replace with your deployment repo
+          publish_branch: main  # Or the desired branch for deployment
+          force_orphan: true
+
