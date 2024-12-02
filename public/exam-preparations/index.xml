@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exams-preparations on My Hugo Site</title>
+    <link>http://localhost:1313/exam-preparations/</link>
+    <description>Recent content in Exams-preparations on My Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/exam-preparations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>eCPPTv3 Exam Preparation Guide</title>
+      <link>http://localhost:1313/exam-preparations/ecpptv3-exam-preparation-copy/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/exam-preparations/ecpptv3-exam-preparation-copy/</guid>
+      <description>&lt;h1 id=&#34;ecpptv3-exam-preparation-guide&#34;&gt;&lt;strong&gt;eCPPTv3 Exam Preparation Guide&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;eCPPTv3&lt;/strong&gt; (Certified Professional Penetration Tester) is a high-level certification that combines both web application penetration testing and network penetration testing. It typically requires around &lt;strong&gt;2-5 months&lt;/strong&gt; of dedicated study to pass.&lt;/p&gt;&#xA;&lt;h2 id=&#34;knowledge-required&#34;&gt;&lt;strong&gt;Knowledge Required&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-active-directory-ad-attacks&#34;&gt;&lt;strong&gt;1. Active Directory (AD) Attacks&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;A solid understanding of all AD attacks is essential:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;AS-REP Roasting&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;DCSync Attack&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Kerberoasting&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pass the Ticket&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Unconstrained Delegation&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Domain Trust Attacks&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-web-application-attacks-tools-and-frameworks&#34;&gt;&lt;strong&gt;2. Web Application Attacks, Tools, and Frameworks&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Proficiency in web application security, including:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>eCPPTv3 Exam Preparation Guide</title>
+      <link>http://localhost:1313/exam-preparations/ecpptv3-exam-preparation/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/exam-preparations/ecpptv3-exam-preparation/</guid>
+      <description>&lt;h1 id=&#34;ecpptv3-exam-preparation-guide&#34;&gt;&lt;strong&gt;eCPPTv3 Exam Preparation Guide&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;eCPPTv3&lt;/strong&gt; (Certified Professional Penetration Tester) is a high-level certification that combines both web application penetration testing and network penetration testing. It typically requires around &lt;strong&gt;2-5 months&lt;/strong&gt; of dedicated study to pass.&lt;/p&gt;&#xA;&lt;h2 id=&#34;knowledge-required&#34;&gt;&lt;strong&gt;Knowledge Required&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-active-directory-ad-attacks&#34;&gt;&lt;strong&gt;1. Active Directory (AD) Attacks&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;A solid understanding of all AD attacks is essential:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;AS-REP Roasting&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;DCSync Attack&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Kerberoasting&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pass the Ticket&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Unconstrained Delegation&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Domain Trust Attacks&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-web-application-attacks-tools-and-frameworks&#34;&gt;&lt;strong&gt;2. Web Application Attacks, Tools, and Frameworks&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Proficiency in web application security, including:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+/* certifications.css */
+
+/* Certifications Container */
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* Individual Certificate Item */
+.certificate-item {
+  flex: 0 1 calc(50% - 20px); /* Two items per row */
+  max-width: calc(50% - 20px);
+  margin: 10px; /* Add margin for spacing */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.certificate-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.certificate-item h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #D5F60C;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+  .certificate-item {
+    flex: 1 1 100%; /* Stack items vertically on smaller screens */
+    max-width: 100%;
+  }
+}

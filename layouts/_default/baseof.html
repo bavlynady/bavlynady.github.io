@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
+  
+  <!-- Include home.css on the home page -->
+  {{ if eq .RelPermalink "/" }}
+    <link rel="stylesheet" href="{{ "/css/home.css" | relURL }}">
+  {{ end }}
+
+  <!-- Include certifications.css on certifications page -->
+  {{ if eq .RelPermalink "/certifications/" }}
+    <link rel="stylesheet" href="{{ "/css/certifications.css" | relURL }}">
+  {{ end }}
+
+  <!-- Include blog.css on blog pages -->
+  {{ if or (eq .RelPermalink "/write-ups/") (in .RelPermalink "/write-ups/") }}
+    <link rel="stylesheet" href="{{ "/css/blog.css" | relURL }}">
+  {{ end }}
+  {{ if or (eq .RelPermalink "/write-ups/") (in .RelPermalink "/exam-preparations/") }}
+  <link rel="stylesheet" href="{{ "/css/blog.css" | relURL }}">
+{{ end }}
+</head>
+<body>
+  {{ partial "navigation.html" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer.html" . }}
+</body>
+</html>
+

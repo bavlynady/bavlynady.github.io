@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <div class="content">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+
+    <div class="writeups-grid">
+      {{ range .RegularPages }}
+        <div class="writeup-card">
+          <a href="{{ .RelPermalink }}">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            <div class="writeup-info">
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Params.description }}</p>
+            </div>
+          </a>
+        </div>
+      {{ else }}
+        <p>No write-ups found.</p>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TryHackMe Write-ups on My Hugo Site</title>
+    <link>http://localhost:1313/write-ups/tryhackme/</link>
+    <description>Recent content in TryHackMe Write-ups on My Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/write-ups/tryhackme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ConvertMyVideo CTF Write-up</title>
+      <link>http://localhost:1313/write-ups/tryhackme/convertmyvideo/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/write-ups/tryhackme/convertmyvideo/</guid>
+      <description>&lt;!-- Write-up content here --&gt;&#xA;&lt;p&gt;&lt;strong&gt;Welcome, Hackers!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Today, we&amp;rsquo;ll be solving the &amp;ldquo;ConvertMyVideo&amp;rdquo; Capture The Flag (CTF) challenge. This medium-difficulty challenge requires a solid understanding of common web attacks and privilege escalation techniques. Let&amp;rsquo;s dive in!&lt;/p&gt;&#xA;&lt;h2 id=&#34;initial-reconnaissance&#34;&gt;Initial Reconnaissance&lt;/h2&gt;&#xA;&lt;p&gt;First, we perform an Nmap scan to identify open ports on the target machine.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Image 1: Nmap Scan Results&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;1-nmap-scan.png&#34; alt=&#34;Nmap Scan&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The scan reveals that ports 22 (SSH) and 80 (HTTP) are open. Since we don&amp;rsquo;t have any valid SSH credentials, we&amp;rsquo;ll focus on exploring the website hosted on port 80.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Example Write-up</title>
+      <link>http://localhost:1313/write-ups/tryhackme/example-copy-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/write-ups/tryhackme/example-copy-2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Example Write-up</title>
+      <link>http://localhost:1313/write-ups/tryhackme/example-copy-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/write-ups/tryhackme/example-copy-3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Example Write-up</title>
+      <link>http://localhost:1313/write-ups/tryhackme/example-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/write-ups/tryhackme/example-copy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Example Write-up</title>
+      <link>http://localhost:1313/write-ups/tryhackme/example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/write-ups/tryhackme/example/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

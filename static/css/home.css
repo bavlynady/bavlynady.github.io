@@ -1,0 +1,247 @@
+/* home.css */
+
+/* Header Section */
+header {
+  position: relative;
+  padding: 80px 50px 50px 50px;
+  overflow: hidden;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+}
+
+.intro-left {
+  max-width: 50%;
+  margin-left: 50px;
+  flex: 1;
+}
+
+.intro-left h1 {
+  font-size: 52.8px;
+  margin-bottom: 22px;
+  color: #D5F60C;
+}
+
+.intro-left p {
+  font-size: 22px;
+  margin-bottom: 33px;
+}
+
+.intro-left button {
+  background-color: #D5F60C;
+  color: black;
+  padding: 16.5px 33px;
+  border: none;
+  border-radius: 25px;
+  font-size: 19.8px;
+  cursor: pointer;
+}
+
+.intro-right {
+  position: relative;
+  flex: 1;
+  margin-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-container {
+  position: relative;
+}
+
+/* First Photo */
+.profile-pic {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: url('/images/about-me/photo.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Rectangle Buttons on Photo */
+.rectangle-button {
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  border-radius: 25px;
+}
+
+#rect1 {
+  width: 90px;
+  height: 50px;
+  background-color: #23252a;
+  font-size: 14px;
+  padding: 10px;
+  top: 5%;
+  left: -60px;
+}
+
+#rect2 {
+  width: 70px;
+  height: 40px;
+  background-color: #23252a;
+  font-size: 12px;
+  padding: 8px;
+  top: 45%;
+  left: -70px;
+}
+
+#rect3 {
+  width: 80px;
+  height: 40px;
+  background-color: #23252a;
+  font-size: 16px;
+  padding: 12px;
+  top: 25%;
+  right: -70px;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+}
+
+/* Stars */
+.star {
+  position: absolute;
+}
+
+#star1 {
+  top: 20%;
+  left: 20%;
+  width: 20px;
+}
+
+#star2 {
+  top: 50%;
+  left: 40%;
+  width: 28px;
+}
+
+/* Certificates Section */
+.certificates-section {
+  text-align: center;
+  padding: 55px;
+}
+
+.certificates-section h2 {
+  font-size: 39.6px;
+  margin-bottom: 11px;
+  color: #D5F60C;
+}
+
+.certificates-section p {
+  max-width: 600px;
+  margin: 0 auto 33px;
+  font-size: 19.8px;
+}
+
+.certificates {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.certificate {
+  padding: 0;
+  border-radius: 15px;
+  width: 399px;
+}
+
+.certificate img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.yellow-button {
+  background-color: #D5F60C;
+  color: black;
+  padding: 16.5px 33px;
+  border: none;
+  border-radius: 25px;
+  font-size: 19.8px;
+  margin-top: 33px;
+  cursor: pointer;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  padding: 55px;
+  /* Move the entire section slightly to the left */
+  margin-left: -30px; /* Adjust this value as needed */
+}
+
+.profile-left,
+.profile-right {
+  flex: 1;
+}
+
+.profile-left {
+  display: flex;
+  justify-content: flex-end; /* Align image to the right within its container */
+  margin-right: 20px; /* Reduced margin to bring text closer */
+  position: relative;
+}
+
+.profile-right {
+  /* Adjust margin to move text closer to the image */
+  margin-left: 0;
+}
+
+.profile-right h2 {
+  font-size: 43.56px; /* Increased by 10% */
+  margin-bottom: 22px;
+  color: #D5F60C;
+}
+
+.profile-right p {
+  font-size: 21.78px; /* Increased by 10% */
+}
+
+/* Second Photo */
+.profile-pic2 {
+  width: 500px; /* Adjusted size */
+  height: 500px;
+  border-radius: 50%;
+  background: url('/images/about-me/photo2.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Blog Section */
+.blog-section {
+  text-align: center;
+  padding: 55px;
+}
+
+.blog-section h2 {
+  font-size: 39.6px;
+  margin-bottom: 33px;
+  color: #D5F60C;
+}
+
+.blog-posts {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.blog-post {
+  width: 330px;
+}
+
+.blog-post img {
+  width: 100%;
+  border-radius: 10px;
+}

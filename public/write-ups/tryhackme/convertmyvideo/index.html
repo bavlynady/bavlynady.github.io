@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <title>ConvertMyVideo CTF Write-up</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  
+  
+
+  
+  
+
+  
+  
+    <link rel="stylesheet" href="/css/blog.css">
+  
+  
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about-me/">About Me</a>
+    <a href="/are-you-a-hr/">Are You a HR?</a>
+    <a href="/write-ups/">Write-ups</a>
+    <a href="/exam-preparations/">Exam Preparations</a>
+  </nav>
+  
+  
+  <div class="content">
+    <h1>ConvertMyVideo CTF Write-up</h1>
+    <div class="post-content">
+      <!-- Write-up content here -->
+<p><strong>Welcome, Hackers!</strong></p>
+<p>Today, we&rsquo;ll be solving the &ldquo;ConvertMyVideo&rdquo; Capture The Flag (CTF) challenge. This medium-difficulty challenge requires a solid understanding of common web attacks and privilege escalation techniques. Let&rsquo;s dive in!</p>
+<h2 id="initial-reconnaissance">Initial Reconnaissance</h2>
+<p>First, we perform an Nmap scan to identify open ports on the target machine.</p>
+<p><strong>Image 1: Nmap Scan Results</strong></p>
+<p><img src="1-nmap-scan.png" alt="Nmap Scan"></p>
+<p>The scan reveals that ports 22 (SSH) and 80 (HTTP) are open. Since we don&rsquo;t have any valid SSH credentials, we&rsquo;ll focus on exploring the website hosted on port 80.</p>
+<h2 id="exploring-the-website">Exploring the Website</h2>
+<p><strong>Image 2: Website Homepage</strong></p>
+<p><img src="2-website.png" alt="Website Homepage"></p>
+<p>The website appears to accept YouTube links for video conversion. We test it by submitting a simple input.</p>
+<p><strong>Image 3: Input Test</strong></p>
+<p><img src="3-input-test.png" alt="Input Test"></p>
+<p>On the surface, nothing interesting happens. To investigate further, we inspect the HTTP responses using Burp Suite&rsquo;s repeater.</p>
+<p><strong>Image 4: Burp Suite Repeater Response</strong></p>
+<p><img src="4-repeater-response.png" alt="Burp Suite Response"></p>
+<p>We notice that the server returns an error, indicating potential vulnerabilities. Given that the site processes URLs, we consider testing for Server-Side Request Forgery (SSRF) and command injection attacks.</p>
+<h2 id="testing-for-ssrf-and-command-injection">Testing for SSRF and Command Injection</h2>
+<p>We set up a simple HTTP server and observe that the target server makes a GET request to our server when we input our server&rsquo;s address.</p>
+<p><strong>Image 5: GET Request Captured</strong></p>
+<p><img src="10-get.png" alt="GET Request"></p>
+<p>However, we can&rsquo;t exploit this behavior further through SSRF. Next, we attempt command injection by manipulating the input to execute system commands.</p>
+<p>By crafting inputs that include command execution syntax, we discover that the server processes certain characters that allow command execution. This opens the door to potentially gaining a shell on the server.</p>
+<h2 id="bypassing-input-restrictions">Bypassing Input Restrictions</h2>
+<p>We encounter an issue where the server doesn&rsquo;t handle spaces in our commands. To bypass this restriction, we use alternative methods to represent spaces in the command syntax.</p>
+<p><strong>Image 6: Bypassing Space Restrictions</strong></p>
+<p><img src="14-IFS.png" alt="Bypassing Spaces"></p>
+<p>Using this technique, we can execute commands without spaces, allowing us to download a reverse shell script to the target server.</p>
+<p><strong>Image 7: Downloading the Reverse Shell Script</strong></p>
+<p><img src="12-wget.png" alt="Downloading Script"></p>
+<h2 id="establishing-a-reverse-shell">Establishing a Reverse Shell</h2>
+<p>After transferring the shell script to the server, we adjust its permissions and execute it to establish a reverse shell connection back to our machine.</p>
+<p><strong>Image 8: Executing the Shell Script</strong></p>
+<p><img src="13-shell.png" alt="Executing Shell"></p>
+<p>With the shell connection established, we can interact with the server at a deeper level.</p>
+<h2 id="privilege-escalation">Privilege Escalation</h2>
+<p>While exploring the server, we find two noteworthy files: <code>clean.sh</code> and <code>.htpasswd</code>. The <code>.htpasswd</code> file contains hashed credentials for a user named <code>itsmeadmin</code>.</p>
+<p>We extract the hash and attempt to crack it using a tool like Hashcat. By identifying the correct hash type and mode, we successfully retrieve the plaintext password.</p>
+<p><strong>Image 9: Cracking the Password</strong></p>
+<p><img src="19-cracking.png" alt="Cracking Password"></p>
+<p>However, logging in via SSH with these credentials doesn&rsquo;t grant us elevated privileges. We need to find another way.</p>
+<h2 id="exploiting-cron-jobs">Exploiting Cron Jobs</h2>
+<p>We check the cron jobs running on the server and notice that the <code>cron</code> daemon is executing the <code>clean.sh</code> script periodically.</p>
+<p>To monitor the cron activities, we use a tool called <code>pspy</code>, which allows us to see processes without requiring elevated privileges.</p>
+<p><strong>Image 10: Monitoring Cron Jobs with pspy</strong></p>
+<p><img src="21-pspy.png" alt="pspy Output"></p>
+<p>Since we have write permissions for <code>clean.sh</code>, we modify it to include a command that initiates a reverse shell as the root user.</p>
+<p>After setting up a listener on our machine, we wait for the cron job to execute our modified script.</p>
+<p><strong>Image 11: Receiving the Root Shell</strong></p>
+<p><img src="17-shell.png" alt="Root Shell"></p>
+<p>Once the cron job runs, we receive a shell with root privileges, successfully completing the challenge.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We navigated through initial reconnaissance, exploited command injection vulnerabilities, bypassed input restrictions, and leveraged cron jobs for privilege escalation to root the server.</p>
+<p>I hope you enjoyed this write-up and found it informative. Stay tuned for more challenges!</p>
+<p><strong>Author:</strong> Bavly Nady</p>
+
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://linkedin.com/in/bavlynady" target="_blank">
+      <img src="/images/linkedin-icon.png" alt="LinkedIn" width="30">
+    </a>
+
+</body>
+</html>
+

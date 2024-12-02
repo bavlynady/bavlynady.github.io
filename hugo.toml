@@ -1,0 +1,15 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "My Hugo Site"
+
+
+[params]
+  author = "Your Name"
+  [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# config.toml
+[build]
+  ignoreFiles = ["\\.tmp$", "\\.bak$"]

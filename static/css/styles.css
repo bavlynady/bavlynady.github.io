@@ -1,0 +1,166 @@
+/* styles.css */
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url('/images/home/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Menu */
+nav {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+nav a {
+  color: #D5F60C;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #23252a;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Content Section */
+.content {
+  padding: 80px 50px 50px 50px;
+}
+
+/* Headings and Text */
+h1,
+h2 {
+  color: #D5F60C;
+}
+
+p {
+  font-size: 19.8px;
+}
+
+/* Centered Photo */
+.centered-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.centered-photo img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Certifications Section */
+.certifications {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.certifications img {
+  width: calc(55% - 30px);
+  max-width: 440px;
+  border-radius: 10px;
+}
+
+/* Button Container */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Yellow Button */
+.yellow-button {
+  display: inline-block;
+  background-color: #D5F60C;
+  color: black;
+  padding: 16.5px 33px;
+  border-radius: 25px;
+  font-size: 19.8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.yellow-button:hover {
+  background-color: #D5F60C;
+}
+
+/* About Me Section */
+.about-me-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-me-photo-container {
+  flex: 0 0 auto;
+  margin-right: 30px;
+}
+
+.about-me-section .about-me-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-me-text {
+  flex: 1;
+}
+
+.about-me-text h2 {
+  margin-top: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+  .certifications img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    position: static;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .about-me-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-me-photo-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-me-section .about-me-photo {
+    width: 172.5px;
+    height: 172.5px;
+  }
+}
